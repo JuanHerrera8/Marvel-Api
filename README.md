@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prueba Técnica - Aplicación Marvel con Login
 
-## Getting Started
+## Descripción
 
-First, run the development server:
+Este proyecto es una aplicación web desarrollada con React y Next.js que implementa un sistema de inicio de sesión con validación de reCAPTCHA y una interfaz para visualizar personajes de Marvel utilizando la API oficial de Marvel.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologías Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Frontend**: React, Next.js
+- **Estilos**: Tailwind CSS
+- **Autenticación**: Sistema propio con validación de reCAPTCHA
+- **Notificaciones**: Sonner (alternativa moderna a SweetAlert)
+- **API**: Marvel API
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Requisitos Previos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js (versión 18 o superior)
+- Cuenta de desarrollador en [Marvel Developer Portal](https://developer.marvel.com/) para obtener las claves de API
+- Cuenta en [Google reCAPTCHA](https://www.google.com/recaptcha/admin) para obtener una clave de sitio (opcional, ya que se incluye una clave de prueba)
 
-## Learn More
+## Funcionalidades Implementadas
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Sistema de Inicio de Sesión
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Formulario con campos de usuario y contraseña
+- Integración con Google reCAPTCHA
+- Validación de credenciales:
+  - Usuario: `admin@admin.com`
+  - Contraseña: `Admin`
+- Notificaciones de error y éxito
+- Redirección a dashboard tras inicio de sesión exitoso
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Dashboard de Personajes Marvel
 
-## Deploy on Vercel
+- Tabla con listado de personajes de Marvel
+- Visualización de imagen, nombre y descripción de cada personaje
+- Vista detallada al hacer clic en el nombre del personaje
+- Funcionalidad de cierre de sesión
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Instrucciones de Uso
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 1. **Inicio de Sesión**
+
+1. Acceder a la página principal
+2. Ingresar las credenciales:
+   - Email: `admin@admin.com`
+   - Contraseña: `Admin`
+3. Completar el reCAPTCHA
+4. Hacer clic en "Iniciar Sesión"
+
+### 2. **Explorar Personajes**
+
+1. Navegar por la tabla de personajes
+2. Hacer clic en el nombre de un personaje para ver detalles
+3. Cerrar la vista detallada con el botón X
+4. Cerrar sesión con el botón "Cerrar Sesión"
+
+
+## Notas Adicionales
+
+- La aplicación utiliza Tailwind CSS para los estilos
+- Se implementó SweetAlert para las notificaciones.
+- El reCAPTCHA implementado es la versión 2 de Google reCAPTCHA
+
+## Mejoras Futuras
+
+- Implementar sistema de registro de usuarios
+- Añadir persistencia de sesión con cookies o localStorage
+- Implementar paginación en la tabla de personajes
+- Añadir búsqueda y filtros para los personajes
+- Implementar modo oscuro
