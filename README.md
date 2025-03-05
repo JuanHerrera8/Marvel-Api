@@ -12,12 +12,6 @@ Este proyecto es una aplicación web desarrollada con React y Next.js que implem
 - **Notificaciones**: Sonner (alternativa moderna a SweetAlert)
 - **API**: Marvel API
 
-## Requisitos Previos
-
-- Node.js (versión 18 o superior)
-- Cuenta de desarrollador en [Marvel Developer Portal](https://developer.marvel.com/) para obtener las claves de API
-- Cuenta en [Google reCAPTCHA](https://www.google.com/recaptcha/admin) para obtener una clave de sitio (opcional, ya que se incluye una clave de prueba)
-
 ## Funcionalidades Implementadas
 
 ### 1. Sistema de Inicio de Sesión
